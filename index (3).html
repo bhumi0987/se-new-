@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Backbencher Pathshala – Master Software Engineering</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: linear-gradient(to bottom right, #ffe6f2, #ffffff);
+      color: #333;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(207, 90, 90, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #ff4da6;
+      text-decoration: none;
+    }
+
+    .home-link {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      margin-right: 12px;
+      padding: 6px 10px;
+      border-radius: 8px;
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-menu li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      padding: 8px 15px;
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+
+    .nav-menu li a:hover,
+    .nav-menu li a.active {
+      background: #ff4da6;
+      color: white;
+    }
+
+    /* Hamburger Menu */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: #333;
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    /* Hero Section */
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80');
+      background-size: cover;
+      background-position: center;
+      padding: 120px 0;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 77, 166, 0.6);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+    /* Unit Overview */
+    .units {
+      padding: 60px 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .unit-card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(255, 77, 166, 0.2);
+      padding: 25px;
+      transition: 0.4s;
+      text-align: center;
+    }
+
+    .unit-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(255, 77, 166, 0.3);
+    }
+
+    .unit-card h3 {
+      color: #ff4da6;
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    .footer {
+      background: #ff4da6;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 50px;
+    }
+
+    /* Unit Pages */
+    .unit-page {
+      display: none;
+      padding: 60px 0;
+    }
+
+    .unit-page.active {
+      display: block;
+    }
+
+    .unit-page h2 {
+      text-align: center;
+      color: #ff4da6;
+      margin-bottom: 30px;
+    }
+
+    .back-btn {
+      display: inline-block;
+      background: #ff4da6;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .back-btn:hover {
+      background: #e60073;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-menu {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        width: 200px;
+        border-radius: 10px;
+        display: none;
+      }
+
+      .nav-menu.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-container">
+        <a href="index.html" class="home-link">Home</a>
+        <a href="#" class="logo">Backbencher Pathshala</a>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="units/unit1.html">Unit 1</a></li>
+          <li><a href="units/unit2.html">Unit 2</a></li>
+          <li><a href="units/unit3.html">Unit 3</a></li>
+          <li><a href="units/unit4.html">Unit 4</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="main-page">
+    <div class="hero-content">
+      <h1>Master Software Engineering</h1>
+      <p>Learn, Build, and Excel in the world of Software Development</p>
+    </div>
+  </section>
+
+  <!-- Units Overview -->
+  <div class="container" id="main-units">
+    <section class="units">
+      <div class="unit-card" onclick="location.href='units/unit1.html'">
+        <h3>Unit 1</h3>
+        <p>Introduction to Software Engineering concepts and methodologies.</p>
+      </div>
+      <div class="unit-card" onclick="location.href='units/unit2.html'">
+        <h3>Unit 2</h3>
+        <p>Software Development Life Cycle and design principles.</p>
+      </div>
+      <div class="unit-card" onclick="location.href='units/unit3.html'">
+        <h3>Unit 3</h3>
+        <p>Software testing, maintenance, and quality assurance.</p>
+      </div>
+      <div class="unit-card" onclick="location.href='units/unit4.html'">
+        <h3>Unit 4</h3>
+        <p>Advanced software project management and case studies.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Unit Pages -->
+  <div class="container">
+    <section class="unit-page" id="unit1-page">
+      <h2>Unit 1 – Introduction to Software Engineering</h2>
+      <p>Software engineering is the systematic application of engineering principles to the design, development, and maintenance of software.</p>
+      <br>
+      <a href="#" class="back-btn" onclick="showMainPage()">← Back to Home</a>
+    </section>
+
+    <section class="unit-page" id="unit2-page">
+      <h2>Unit 2 – Software Development Life Cycle</h2>
+      <p>The SDLC includes phases like planning, analysis, design, implementation, testing, deployment, and maintenance.</p>
+      <br>
+      <a href="#" class="back-btn" onclick="showMainPage()">← Back to Home</a>
+    </section>
+
+    <section class="unit-page" id="unit3-page">
+      <h2>Unit 3 – Software Testing & Quality Assurance</h2>
+      <p>Testing ensures reliability, functionality, and performance of software through various strategies like unit testing and system testing.</p>
+      <br>
+      <a href="#" class="back-btn" onclick="showMainPage()">← Back to Home</a>
+    </section>
+
+    <section class="unit-page" id="unit4-page">
+      <h2>Unit 4 – Software Project Management</h2>
+      <p>Software Project Management involves planning, scheduling, tracking, and delivering projects within time and budget constraints.</p>
+      <br>
+      <a href="#" class="back-btn" onclick="showMainPage()">← Back to Home</a>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Backbencher Pathshala | Designed with ❤ for learners</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    // Close menu on link click
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+
+    // Show unit function
+    function showUnit(unitNumber) {
+      document.getElementById('main-page').style.display = 'none';
+      document.getElementById('main-units').style.display = 'none';
+      for (let i = 1; i <= 4; i++) {
+        const el = document.getElementById(`unit${i}-page`);
+        if (el) el.style.display = 'none';
+      }
+      const target = document.getElementById(`unit${unitNumber}-page`);
+      if (target) target.style.display = 'block';
+
+      document.querySelectorAll('.nav-menu a').forEach(link => link.classList.remove('active'));
+      const activeLink = document.querySelector(`.nav-menu a[href="#unit${unitNumber}"]`);
+      if (activeLink) activeLink.classList.add('active');
+      window.scrollTo(0, 0);
+    }
+
+    // Show main page again
+    function showMainPage() {
+      document.getElementById('main-page').style.display = 'block';
+      document.getElementById('main-units').style.display = 'block';
+      for (let i = 1; i <= 4; i++) {
+        const el = document.getElementById(`unit${i}-page`);
+        if (el) el.style.display = 'none';
+      }
+      document.querySelectorAll('.nav-menu a').forEach(link => link.classList.remove('active'));
+      window.scrollTo(0, 0);
+    }
+
+    // Logo click to go home
+    document.querySelector('.logo').addEventListener('click', (e) => {
+      e.preventDefault();
+      showMainPage();
+    });
+  </script>
+</body>
+</html>
