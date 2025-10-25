@@ -1,0 +1,11 @@
+Unit 1 — GATE-style sample questions
+
+1) Define the engineering design process and list its main stages. (10 marks)
+
+2) A team must design a portable water filter for a remote village. List five constraints and explain how each constraint affects design decisions. (15 marks)
+
+3) Explain two ethical issues that engineers might face when working on safety-critical systems and suggest mitigation measures. (10 marks)
+
+4) Describe the role of prototyping in reducing project risk. Provide an example. (5 marks)
+
+5) Short answer: What is the difference between a requirement and a specification? (2 marks)

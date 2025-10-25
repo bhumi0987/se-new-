@@ -1,0 +1,43 @@
+Unit 2 — Introduction to Re-engineering (Detailed notes)
+
+Overview
+Software re-engineering covers activities to understand, restructure, and transform existing software systems (legacy systems) to improve maintainability, add features, or migrate to modern platforms. The goal is to reduce technical debt while preserving valuable functionality.
+
+1. Reasons to re-engineer
+- Obsolete frameworks or languages
+- Poor code maintainability and lack of tests
+- Performance bottlenecks
+- Changes in business requirements
+
+2. Legacy systems & common challenges
+- Missing or outdated documentation
+- Tight coupling and monolithic architecture
+- Deprecated libraries and platforms
+- Hidden dependencies and fragile tests
+
+3. Typical strategies
+- Re-host: move to new infrastructure with minimal changes.
+- Re-platform: move and perform small adaptations for new environments.
+- Refactor: improve internal structure without changing external behavior.
+- Rewrite: implement system from scratch when code is unsalvageable.
+- Wrap & Integrate: expose legacy functionality behind modern APIs.
+
+4. Practices and tools
+- Static analysis (identify complexity hotspots)
+- Automated refactoring tools (safe API-based refactors)
+- Test harnesses and fixture creation (regression safety)
+- Continuous Integration pipelines to run tests automatically
+
+5. Risk management
+- Incremental migration: small, reversible steps
+- Strong test coverage before heavy refactors
+- Clear rollback and monitoring plans
+
+Study checklist
+- Identify code smells and hotspots using static tools.
+- Write characterization tests to capture current behavior.
+- Choose a migration strategy based on cost, risk, and timeline.
+- Implement incremental changes and measure results.
+
+Practice materials
+- unit2-gate.txt: GATE-style questions for this topic.

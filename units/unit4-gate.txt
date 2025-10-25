@@ -1,0 +1,9 @@
+Unit 4 — GATE-style sample questions
+
+1) Explain the differences between unit testing and system testing and when each is used. (10 marks)
+
+2) Describe test automation strategy for a medium-sized web application and list pros and cons. (15 marks)
+
+3) How would you measure the effectiveness of a test suite? Propose 3 metrics and their limitations. (10 marks)
+
+4) Short answer: What does 'CI' stand for? (2 marks)

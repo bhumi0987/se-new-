@@ -1,0 +1,28 @@
+Unit 3 — Software Design & Architecture (Detailed notes)
+
+1. Architectural Patterns (overview)
+- Monolithic: single deployable unit; simpler initially but harder to scale and maintain at large size.
+- Layered: separation (presentation, business, data) enabling clearer responsibilities.
+- Microservices: small, independently deployable services communicating via APIs; enables independent scaling and development.
+- Event-driven: components communicate via asynchronous events; useful for decoupling.
+
+2. Design Principles
+- SOLID: Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion.
+- DRY (Don't Repeat Yourself), KISS (Keep It Simple, Stupid).
+
+3. UML & Modeling
+- Use class diagrams for structure, sequence diagrams for interactions, and component diagrams for system decomposition.
+
+4. Modularity & Interfaces
+- Define clear module boundaries and public interfaces; prefer composition over inheritance where appropriate.
+
+5. Design for Scalability & Performance
+- Techniques: caching, asynchronous processing, database sharding, horizontal scaling, CDN usage.
+
+Practical checklist
+- Choose architecture based on team size, release cadence, and scalability needs.
+- Design clear interfaces and document expected behaviors.
+- Maintain an architecture decision record (ADR) for major choices.
+
+Practice materials
+- unit3-gate.txt: GATE-style sample questions for Unit 3.

@@ -1,0 +1,9 @@
+Unit 3 — GATE-style sample questions
+
+1) Compare monolithic and microservices architectures and list pros and cons of each. (10 marks)
+
+2) Explain the SOLID principles with short examples for each. (15 marks)
+
+3) Design a small system for a simple bookstore and provide a high-level architecture (components and responsibilities). (15 marks)
+
+4) Short answer: What is coupling? (2 marks)

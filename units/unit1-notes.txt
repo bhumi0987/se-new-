@@ -1,0 +1,49 @@
+Unit 1 — Introduction to Engineering (Detailed notes)
+
+1. What is Engineering? — definition & role
+Engineering is the disciplined application of scientific, mathematical and practical knowledge to design, build and maintain structures, machines, systems, and processes that solve problems and meet human needs. Engineers translate requirements into workable solutions while balancing constraints such as cost, safety, time, and environmental impact.
+
+2. Engineering Disciplines & Branches (overview)
+- Mechanical Engineering: focuses on mechanical systems, thermodynamics, and materials.
+- Civil Engineering: infrastructure, structures, geotechnics, and water management.
+- Electrical & Electronics Engineering: circuits, power systems, control systems.
+- Chemical Engineering: process design, reactions, and plant operation.
+- Computer / Software Engineering: software systems, algorithms, architecture, and lifecycle.
+- Biomedical, Aerospace, Environmental and other interdisciplinary branches.
+
+3. Engineering Design Process (stages & example)
+- Define problem: capture stakeholder needs, constraints, and acceptance criteria.
+- Research & Analysis: gather data, review existing solutions, perform feasibility studies.
+- Ideation & Conceptual Design: brainstorm possible approaches and create conceptual models.
+- Detailed Design: select materials, algorithms, interfaces, and finalize specifications.
+- Prototype: build a working model to validate assumptions.
+- Test & Evaluate: run tests against requirements, collect metrics, and identify failures.
+- Iterate & Improve: refine design based on test results, perform further optimization.
+- Deploy & Maintain: deliver the final product and ensure long-term support and updates.
+
+Example: Designing a low-cost water filter — define throughput and contaminant targets, evaluate local materials, prototype a filter media layer, test filtration performance, iterate on layer composition.
+
+4. Ethics & Professionalism in Engineering
+- Prioritize public safety: ensure designs do not introduce undue risk.
+- Honesty and transparency: report findings, limitations, and uncertainties truthfully.
+- Responsibility: follow codes of professional practice and regulations.
+- Social and environmental impact: consider sustainability and societal consequences.
+
+5. Basics of Software Engineering (how software fits in engineering)
+- Requirements engineering: eliciting and documenting functional and non-functional requirements.
+- Architectural design: defining components, modules, and interfaces.
+- Implementation: coding practices, version control, and repeatable builds.
+- Testing: unit, integration, system, and acceptance testing.
+- Maintenance: bug fixes, enhancements, and regression testing.
+
+Key concepts and study checklist
+- Understand difference between requirements (what is needed) and specifications (precise description of how to meet needs).
+- Learn common design constraints (cost, safety, time, resources, regulations) and how they affect trade-offs.
+- Practice mapping small projects to design stages and produce a short test plan.
+- Get comfortable with prototyping: build small, quick experiments to validate assumptions.
+
+Further reading & resources
+- GeeksforGeeks: https://www.geeksforgeeks.org/
+- Engineering (Wikipedia): https://en.wikipedia.org/wiki/Engineering
+
+Downloadable practice: unit1-gate.txt (GATE-style practice questions) and unit1-gate.txt contains sample exam-style questions.

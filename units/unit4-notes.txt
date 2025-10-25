@@ -1,0 +1,32 @@
+Unit 4 — System Test & Quality (Detailed notes)
+
+1. Testing levels and purpose
+- Unit testing: validate individual components or functions.
+- Integration testing: verify interactions between modules.
+- System testing: validate the complete integrated system against requirements.
+- Acceptance testing: performed with stakeholders to confirm business needs are met.
+
+2. Test design techniques
+- Equivalence partitioning: group inputs that are expected to behave similarly.
+- Boundary value analysis: test values at the edge of partitions.
+- State transition testing: validate systems with state-dependent behavior.
+
+3. Automation & CI
+- Automate unit and regression tests to run in CI pipelines for immediate feedback.
+- Use test doubles (mocks, stubs) to isolate components while keeping tests fast.
+
+4. QA metrics & trade-offs
+- Test coverage: measures how much code or behavior is exercised by tests; high coverage doesn’t guarantee correctness.
+- Defect density: defects per KLOC; useful for tracking trends.
+- Mean time to detect/repair: operational metric for team responsiveness.
+
+5. Defect lifecycle and reporting
+- Common steps: report → triage → assign → fix → verify → close. Good bug reports include steps to reproduce, expected vs actual, logs and severity.
+
+Practical checklist
+- Prioritize quick, deterministic unit tests and a small number of broader integration tests.
+- Keep tests fast and isolated; flaky tests reduce trust in the suite.
+- Use metrics to guide improvements but investigate root causes for spikes.
+
+Practice materials
+- unit4-gate.txt: GATE-style sample questions for Unit 4.

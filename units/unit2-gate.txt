@@ -1,0 +1,9 @@
+Unit 2 — GATE-style sample questions
+
+1) List and briefly describe common strategies for migrating legacy software to modern platforms. (10 marks)
+
+2) A legacy system has no automated tests. Outline a plan to minimize risk when refactoring the system. (15 marks)
+
+3) Compare and contrast rewriting vs refactoring. Give two advantages and disadvantages of each. (10 marks)
+
+4) Short answer: What is technical debt? (2 marks)

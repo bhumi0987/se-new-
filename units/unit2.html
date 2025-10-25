@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Unit 2 — Introduction to Re-engineering</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--accent:#ff4da6;--maxw:1200px}
+    *{box-sizing:border-box;margin:0;padding:0;font-family:'Poppins',sans-serif}
+    body{background:#ffffff;color:#222;line-height:1.5}
+    .container{width:90%;max-width:var(--maxw);margin:28px auto}
+    header{border-bottom:1px solid #f2f2f2;padding:16px 0}
+    .nav{display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand .logo{color:var(--accent);font-weight:700;text-decoration:none;font-size:1.25rem}
+    .home-link{color:#333;text-decoration:none;font-weight:600}
+    nav ul{list-style:none;display:flex;gap:14px}
+    nav a{color:#333;text-decoration:none;padding:8px 10px;border-radius:8px}
+    nav a:hover{background:var(--accent);color:#fff}
+    main{padding:28px 0}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:28px}
+    @media(max-width:860px){.grid{grid-template-columns:1fr}}
+    section.card{background:#fff;border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(0,0,0,0.04);margin-bottom:16px}
+    h1,h2,h3{color:var(--accent)}
+    .video-wrapper{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px}
+    .video-wrapper iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    .resources ul{list-style:disc;margin-left:18px}
+    footer{margin-top:28px;padding:20px 0;text-align:center;color:#666}
+  </style>
+</head>
+<body>
+  <header class="container">
+    <div class="nav">
+      <div class="brand">
+        <a class="home-link" href="../index.html">Home</a>
+        <a class="logo" href="../index.html">Backbencher Pathshala</a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Main</a></li>
+          <li><a href="../index.html#unit2">Unit 2</a></li>
+          <li><a href="../index.html#unit3">Unit 3</a></li>
+          <li><a href="../index.html#unit4">Unit 4</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Unit 2 — Introduction to Re-engineering</h1>
+    <p style="margin:10px 0 24px;color:#444">Overview and study materials on software re-engineering, legacy migration, and strategies.</p>
+
+    <div class="grid">
+      <div>
+        <section class="card" id="important-topics">
+          <h2>Important Topics</h2>
+          <ol style="margin-top:12px;padding-left:18px;color:#333">
+            <li><strong>What is Re-engineering?</strong> — goals and motivations</li>
+            <li><strong>Legacy Systems &amp; Challenges</strong> — technical debt, outdated tech</li>
+            <li><strong>Reverse Engineering vs Re-engineering</strong> — distinctions and use cases</li>
+            <li><strong>Migration Strategies &amp; Tools</strong> — incremental, rewrite, wrap</li>
+            <li><strong>Risk &amp; Change Management</strong> during re-engineering</li>
+          </ol>
+        </section>
+
+        <section class="card" id="gate-question">
+          <h2>GATE Question (reference)</h2>
+          <p style="margin-top:10px">Sample GATE-style question:</p>
+          <blockquote style="margin:12px 0;padding:12px;background:#fff8fb;border-left:4px solid var(--accent)">
+            “List and briefly describe common strategies for migrating legacy software to modern platforms.”
+          </blockquote>
+          <p>Reference / further reading:
+            <a href="https://www.geeksforgeeks.org/" target="_blank" rel="noopener noreferrer">More reading on GeeksforGeeks</a>
+          </p>
+        </section>
+
+        <section class="card" id="very-short-questions">
+          <h2>Very Short Questions</h2>
+          <ul style="margin-top:12px;list-style:decimal;padding-left:18px;color:#333">
+            <li>What is technical debt?</li>
+              <p style="margin-top:8px;color:#444">Re-hosting moves an application to new infrastructure with minimal code changes; rewriting replaces or reimplements the application core, which is costlier but may remove legacy constraints.</p>
+            <li>What does 'refactor' mean?</li>
+            <li>Give one reason to re-engineer software.</li>
+              <p style="margin-top:8px;color:#444">Incremental migration validates each small change and allows rollback if problems appear; it avoids a large single-point failure and spreads risk over time.</p>
+        </section>
+
+              <p style="margin-top:8px;color:#444">Testing preserves behavior, helps detect regressions introduced during refactors, and provides confidence when replacing components.</p>
+          <h2>Short Questions</h2>
+          <ol style="margin-top:12px;padding-left:18px;color:#333">
+              <p style="margin-top:8px;color:#444">Documentation captures design intent and expected behavior, reducing guesswork and accelerating safe modifications.</p>
+              <p style="margin-top:8px;color:#444">Re-hosting moves software to a new environment with minimal changes; rewriting replaces major parts or all of the codebase.</p>
+            </li>
+            <li><strong>Describe how incremental migration reduces risk.</strong>
+
+        <section class="card" id="mvp-questions">
+          <h2>MVP / High-yield Questions</h2>
+          <ul style="margin-top:12px;padding-left:18px;color:#333;list-style:decimal">
+            <li>When would you choose 'refactor' over 'rewrite'?</li>
+            <li>List three signs that a system needs re-engineering.</li>
+            <li>Describe a safe incremental migration plan in bullets.</li>
+            <li>Explain the role of automated tests during migration.</li>
+          </ul>
+        </section>
+
+        <section class="card" id="gate-samples">
+          <h2>GATE Sample Paper</h2>
+          <p style="margin-top:10px"><a href="unit2-gate.txt" download>Download Unit 2 — GATE sample questions (text)</a></p>
+        </section>
+
+        <section class="card" id="long-questions">
+          <h2>Long Questions</h2>
+          <ol style="margin-top:12px;padding-left:18px;color:#333">
+            <li>Design a migration plan for a legacy inventory system used by a small retailer, including tests and rollback strategies.</li>
+            <li>Critically discuss the trade-offs between starting a rewrite vs refactoring an existing system.</li>
+            <li>Explain how to build characterization tests for an undocumented legacy module.</li>
+            <li>Propose a monitoring approach to validate migration success post-deployment.</li>
+          </ol>
+        </section>
+              <p style="margin-top:8px;color:#444">Migrating in small steps allows validation at each stage and avoids a single big-bang failure.</p>
+            </li>
+            <li><strong>What role does testing play during re-engineering?</strong>
+              <p style="margin-top:8px;color:#444">Testing ensures behavior is preserved and helps spot regressions introduced during changes.</p>
+            </li>
+            <li><strong>How can documentation help in reverse engineering?</strong>
+              <p style="margin-top:8px;color:#444">Good documentation speeds understanding of architecture and reduces guesswork when reconstructing design intent.</p>
+            </li>
+          </ol>
+        </section>
+
+      </div>
+
+      <aside class="unit-side">
+        <section class="card resources">
+          <h3>Resources &amp; Notes</h3>
+          <p>Download notes and watch explanatory videos.</p>
+          <ul style="margin-top:8px">
+            <li><a href="unit2-notes.txt" download>Unit 2 — Quick Notes (text)</a></li>
+            <li><a href="https://www.youtube.com/results?search_query=software+reengineering" target="_blank" rel="noopener noreferrer">Re-engineering — videos</a></li>
+            <li><a href="https://gate2026.iitg.ac.in/download.html" target="_blank" rel="noopener noreferrer">Official GATE year-wise downloads (2021–2025) — IIT Guwahati</a></li>
+            <li><a href="https://drive.google.com/drive/folders/1sV6FgtOUDl_PGjc36Zdc0eJwK1zZ_2OF" target="_blank" rel="noopener noreferrer">Bulk GATE papers (2007–2025) — Google Drive (official listing)</a></li>
+            <li><strong>Local copies:</strong> Run <code>download-gate-papers.ps1</code> from the <code>units/</code> folder to fetch official CS papers (downloads go to <code>units/gate-papers/</code>).</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h3>Featured video</h3>
+          <div class="video-wrapper" style="margin-top:12px">
+            <iframe src="https://www.youtube.com/embed/0V6b2CwX9b0" title="Software Re-engineering" allowfullscreen></iframe>
+          </div>
+        </section>
+
+        <section class="card">
+          <h3>Other units (preview)</h3>
+          <ul style="margin-top:8px">
+            <li>Unit 1 — Introduction to Engineering</li>
+            <li>Unit 3 — Software Design &amp; Architecture</li>
+            <li>Unit 4 — System Test &amp; Quality</li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Backbencher Pathshala — Unit 2 materials</p>
+    </div>
+  </footer>
+
+</body>
+
+  <script>
+    (function(){
+      try{
+        const title = document.title || '';
+        const m = title.match(/Unit\s*(\d+)/i);
+        if(m){
+            const unitText = 'Unit ' + m[1];
+            const links = document.querySelectorAll('nav a');
+            for(const a of links){
+              if(a.textContent.trim() === unitText){
+                a.textContent = 'Main';
+                a.href = '../index.html';
+                a.setAttribute('aria-current','page');
+              }
+            }
+          }
+      }catch(e){console.warn(e)}
+    })();
+  </script>
+</html>
